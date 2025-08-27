@@ -3,13 +3,13 @@ import MMKV
 import RealmSwift
 import os
 
-class SharedDataManager {
+class ChatSharedDataManager {
     private let logger = Logger(
         subsystem: "NotificationExtension",
-        category: "SharedDataManager"
+        category: "ChatSharedDataManager"
     )
     
-    static let shared = SharedDataManager()
+    static let shared = ChatSharedDataManager()
     private init() {}
     
     // MARK: - No Caching, No State - Each Call is Independent

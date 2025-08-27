@@ -14,7 +14,7 @@ Shared data manager for chat app and extensions.
 Add this to your Podfile:
 
 ```ruby
-pod 'SharedDataManager', :git => 'https://github.com/qusaieilouti99/chat-shared-swift-module.git'
+pod 'ChatSharedDataManager', :git => 'https://github.com/qusaieilouti99/chat-shared-swift-module.git'
 ```
 
 Then run:
@@ -29,13 +29,13 @@ pod install
 import ChatSharedDataManager
 
 // Get JWT token
-let token = SharedDataManager.shared.getJWTToken(hostAppBundleId: "com.yourapp.bundle")
+let token = ChatSharedDataManager.shared.getJWTToken(hostAppBundleId: "com.yourapp.bundle")
 
 // Get contact by username
-let contact = SharedDataManager.shared.getContact(byUsername: "username", hostAppBundleId: "com.yourapp.bundle")
+let contact = ChatSharedDataManager.shared.getContact(byUsername: "username", hostAppBundleId: "com.yourapp.bundle")
 
 // Send message acknowledgement
-SharedDataManager.shared.sendMessageAcknowledgement(
+ChatSharedDataManager.shared.sendMessageAcknowledgement(
     messageId: "messageId",
     userId: "userId", 
     hostAppBundleId: "com.yourapp.bundle"
