@@ -1,4 +1,4 @@
-# SharedDataManager
+# ChatSharedDataManager
 
 Shared data manager for chat app and extensions.
 
@@ -26,7 +26,7 @@ pod install
 ## Usage
 
 ```swift
-import SharedDataManager
+import ChatSharedDataManager
 
 // Get JWT token
 let token = SharedDataManager.shared.getJWTToken(hostAppBundleId: "com.yourapp.bundle")
@@ -51,4 +51,4 @@ SharedDataManager.shared.sendMessageAcknowledgement(
 
 ## License
 
-SharedDataManager is available under the MIT license. See the LICENSE file for more info.
+ChatSharedDataManager is available under the MIT license. See the LICENSE file for more info.
