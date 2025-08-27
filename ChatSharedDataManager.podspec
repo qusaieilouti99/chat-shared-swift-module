@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ChatSharedDataManager'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'Shared data manager for chat app and extensions'
   s.description      = <<-DESC
 ChatSharedDataManager provides unified access to app data across main app,
@@ -10,7 +10,7 @@ contacts, and API calls with proper multi-process support.
 
   s.homepage         = 'https://github.com/qusaieilouti99/chat-shared-swift-module'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Qusai Eilouti' => 'qusai@example.com' }
+  s.author           = { 'Qusai Eilouti' => 'qusaieilouti@gmail.com' }
   s.source           = { :git => 'https://github.com/qusaieilouti99/chat-shared-swift-module.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '16.0'
