@@ -247,7 +247,7 @@ public class ChatSharedDataManager {
         let config = Realm.Configuration(
             fileURL: realmURL,
             readOnly: true,
-            schemaVersion: 205,
+            schemaVersion: 206,
             objectTypes: [ContactV3.self]
         )
 

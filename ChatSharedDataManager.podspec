@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ChatSharedDataManager'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'Shared data manager for chat app and extensions'
   s.description      = <<-DESC
 ChatSharedDataManager provides unified access to app data across main app,
