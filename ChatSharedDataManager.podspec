@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'ChatSharedDataManager'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = 'Shared data manager for chat app and extensions'
   s.description      = <<-DESC
 ChatSharedDataManager provides unified access to app data across main app,
@@ -20,7 +20,7 @@ contacts, and API calls with proper multi-process support.
 
   # Dependencies
   s.dependency 'MMKV'
-  s.dependency 'RealmSwift', '~> 10.49.2'
+  s.dependency 'RealmSwift', '~> 20.0.3'
 
   # Framework requirements
   s.frameworks = 'Foundation'
