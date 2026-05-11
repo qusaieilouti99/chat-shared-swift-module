@@ -119,33 +119,7 @@ public class ChatSharedDataManager {
         userId: String,
         hostAppBundleId: String
     ) -> String? {
-        var mmkvInstance: MMKV?
-
-        defer {
-            // Only cleanup the instance we created
-            cleanupMMKVInstance(mmkvInstance)
-        }
-
         guard let apiURL = getAPIURL() else {
-            return nil
-        }
-
-        // Get token using our internal method to reuse MMKV instance
-        guard let containerURL = getContainerURL(hostAppBundleId: hostAppBundleId) else {
-            logger.error("Container not found for bundle: \(hostAppBundleId)")
-            return nil
-        }
-
-        ensureMMKVInitialized(groupDirPath: containerURL.path)
-
-        guard let mmkv = MMKV(mmapID: "default", mode: .multiProcess) else {
-            logger.error("Failed to create MMKV instance")
-            return nil
-        }
-
-        mmkvInstance = mmkv
-
-        guard let token = mmkv.string(forKey: "Token") else {
             return nil
         }
 
@@ -153,7 +127,7 @@ public class ChatSharedDataManager {
             ? "groups/\(groupId)/picture"
             : "users/\(userId)/profile-picture"
 
-        return "\(apiURL)\(path)?token=\(token)"
+        return "\(apiURL)\(path)"
     }
 
     public func decodeJWT(hostAppBundleId: String) -> [String: Any]? {
